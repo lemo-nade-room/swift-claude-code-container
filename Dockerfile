@@ -53,6 +53,14 @@ RUN curl -fsSL https://get.docker.com -o get-docker.sh
 RUN sudo sh get-docker.sh
 
 # ================================
+# Open Tofu
+# ================================
+RUN curl --proto '=https' --tlsv1.2 -fsSL https://get.opentofu.org/install-opentofu.sh -o install-opentofu.sh
+RUN chmod +x install-opentofu.sh
+RUN ./install-opentofu.sh --install-method deb
+RUN rm -f install-opentofu.sh
+
+# ================================
 # Setup Swift
 # ================================
 WORKDIR /swiftly

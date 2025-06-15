@@ -7,7 +7,7 @@ Swift開発環境とClaude Code AIアシスタントを統合した完全なDock
 - **Swift開発**: Swiftlyによる最新のSwiftツールチェーン
 - **AI支援コーディング**: Claude Code CLIがプリインストール済み
 - **Web開発**: Swift用WebフレームワークのVaporを同梱
-- **開発ツール**: Git、Node.js、AWS SAM CLI、Swift Formatなど
+- **開発ツール**: Git、Node.js、AWS SAM CLI、Swift Format、OpenTofuなど
 - **パッケージ管理**: Homebrewによる簡単なパッケージインストール
 - **Docker-in-Docker**: コンテナ内でのDocker実行サポート
 - **非rootユーザー**: `swiftlover`ユーザーによる安全な開発環境
@@ -95,6 +95,7 @@ claude --dangerously-skip-permissions
 - **Swift Protobuf**: Swift用プロトコルバッファ
 - **Swift Format**: コードフォーマッター
 - **Docker**: コンテナランタイム
+- **OpenTofu**: Terraform互換のインフラストラクチャ管理ツール
 
 ## ボリュームマウント
 
