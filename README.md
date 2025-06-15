@@ -1,6 +1,12 @@
+# Swift Claude Code コンテナ環境
+
+## Build
+
 ```shell
 docker build -t swift-claude-code:latest -f ./Dockerfile .
 ```
+
+## Docker
 
 ```shell
 docker run --rm -it \
@@ -8,8 +14,10 @@ docker run --rm -it \
   -v "${HOME}/.gitconfig":/swiftlover/.gitconfig \
   -v "$(pwd)":/swiftlover/workspace \
   -w /swiftlover/workspace \
-  swift-claude-code:latest bash
+  lemonaderoom/swift-claude-code:latest bash
 ```
+
+## Containerization Framework
 
 ```shell
 container system start
@@ -18,6 +26,12 @@ container run --rm -i -t \
 --volume "${HOME}/.claude":/swiftlover/.claude \
 --volume "$(pwd)":/swiftlover/workspace \
 --cpus 8 \
---memory 16g \
+--memory 24g \
 lemonaderoom/swift-claude-code bash
+```
+
+## 危険な完全自動モード
+
+```shell
+claude --dangerously-skip-permissions
 ```
