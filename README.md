@@ -20,6 +20,7 @@ Swift開発環境とClaude Code AIアシスタントを統合した完全なDock
 docker run --rm -it \
   -v "${HOME}/.claude":/swiftlover/.claude \
   -v "${HOME}/.gitconfig":/swiftlover/.gitconfig \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$(pwd)":/swiftlover/workspace \
   -w /swiftlover/workspace \
   lemonaderoom/swift-claude-code:latest bash
@@ -42,6 +43,8 @@ docker pull lemonaderoom/swift-claude-code:latest
 # コンテナを実行
 docker run --rm -it \
   -v "${HOME}/.claude":/swiftlover/.claude \
+  -v "${HOME}/.gitconfig":/swiftlover/.gitconfig \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$(pwd)":/swiftlover/workspace \
   lemonaderoom/swift-claude-code:latest bash
 ```
@@ -51,6 +54,8 @@ docker run --rm -it \
 ```shell
 docker run --rm -it \
   -v "${HOME}/.claude":/swiftlover/.claude \
+  -v "${HOME}/.gitconfig":/swiftlover/.gitconfig \
+  -v /var/run/docker.sock:/var/run/docker.sock \
   -v "$(pwd)":/swiftlover/workspace \
   --cpus 8 \
   --memory 24g \
